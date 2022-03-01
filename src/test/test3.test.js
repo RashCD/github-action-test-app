@@ -5,7 +5,7 @@ describe('Second test', () => {
   test('should have correct text', () => {
     render(<App />);
 
-    expect(screen.getByText(/edit/i)).toBeInTheDocument();
+    expect(screen.getByText(/edits/i)).toBeInTheDocument();
     expect(screen.getByText(/and save to reload\./i)).toBeInTheDocument();
   });
 });
