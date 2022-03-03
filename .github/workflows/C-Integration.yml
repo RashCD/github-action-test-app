@@ -42,7 +42,7 @@ jobs:
 
       # install dependencies
       - name: npm install
-        run: npm ci
+        run: yarn install --immutable --immutable-cache --check-cache
 
       # start testing. matrix files is supplied from strategy matrix above
       - name: test to test integration
