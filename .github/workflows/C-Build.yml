@@ -1,0 +1,25 @@
+# This is a basic workflow to help you get started with Actions
+
+name: C-Integration
+
+on:
+  push:
+    branches: [master]
+
+  workflow_dispatch:
+
+jobs:
+  test_build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 14
+
+      - name: Run npm install
+        run: yarn install --immutable --immutable-cache --check-cache
+
+      - name: Run build to test it compiled properly
+        run: yarn build
