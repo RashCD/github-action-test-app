@@ -30,4 +30,5 @@ jobs:
           yarn test
           src/test/test1.test.js
           src/test/test2.test.js
+          src/test/test3.test.js
           src/test/test4.test.js
